@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *, body{padding:0px;margin:0px;transition:inherit;}
+    body{
+      display: flex;justify-content: center;font-family: laila;background: #00deea;}
+    .container{width: 90%;height: 405px;margin-top: 8%;}
+    table{width: 100%;margin-top: 10px;text-align: left;border-collapse:collapse ;cursor: pointer; }
+    thead{color:white;text-align: center;font-size: 1.1em;padding: 10px;}
+    thead tr{background: #01579b; }
+    th{width: 200px;height: 50px;}
+    th:nth-child(1){width: 50px;}
+    tr{background: white;border-bottom:.5px solid #ccc; }
+    td{width: 200px;height: 40px;text-align: center;}
+    td:nth-child(2){text-align: left;padding-left:2% ;}
+    td:nth-child(1){width: 50px;border-right: .5px solid #ccc;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Sr.</th>
+          <th>Student Name</th>
+          <th>Ege</th>
+          <th>Subject</th>
+          <th>Marks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr draggable="true" ondragstart="start()" ondragover="dragover()">
+          <td>1</td>
+          <td>Smith Eloise</td>
+          <td>16</td>
+          <td>Compyuter</td>
+          <td>81%</td>
+        </tr>
+
+        <tr draggable="true" ondragstart="start()" ondragover="dragover()">
+          <td>2</td>
+          <td>Yvonne Tucker</td>
+          <td>30</td>
+          <td>Physic</td>
+          <td>68%</td>
+        </tr>
+
+        <tr draggable="true" ondragstart="start()" ondragover="dragover()">
+          <td>3</td>
+          <td>Parker Simon</td>
+          <td>23</td>
+          <td>Chemistry</td>
+          <td>51%</td>
+        </tr>
+
+        <tr draggable="true" ondragstart="start()" ondragover="dragover()">
+          <td>4</td>
+          <td>Parker Lucille</td>
+          <td>19</td>
+          <td>Math</td>
+          <td>80%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <script>
+    var row;
+    function start(){
+      row = event.target;
+    }
+    function dragover() {
+      var e =event;
+      e.preventDefault();
+      let children = Array.from(e.target.preventNode.children);
+
+      if(children.indexOf(e.target.preventNode)>children.indexOf(row)) e.target.preventNode.after(row);
+      else
+      e.target.preventNode
+    }
+  </script>
+
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Drag and Drop Sortable List | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <ul class="sortable-list">
+      <li class="item" draggable="true">
+        <div class="details">
+          
+          <span>Kristina Zasiadko</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+          
+          <span>Gabriel Wilson</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+          
+          <span>Ronelle Cesicon</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+    
+          <span>James Khosravi</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+          
+          <span>Annika Hayden</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+      <li class="item" draggable="true">
+        <div class="details">
+        
+          <span>Donald Horton</span>
+        </div>
+        <i class="uil uil-draggabledots"></i>
+      </li>
+    </ul>
+
+  </body>
+</html>
